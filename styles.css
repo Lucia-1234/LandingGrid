@@ -9,7 +9,7 @@
   --color-principal:#b08463 ;
   --color-secundario: #b99378;
   --color-alternativo:#714329;
-  --color-menu-texto: #fff; 
+  --color-texto: #fff; 
   --menu-texto-hover: #000;
   --menu-boton: #714329;
   --menu-boton-hover: #b9a7;
@@ -27,7 +27,7 @@ header{
     align-items: center;
     padding: 1rem 2rem;
     background-color: var(--color-principal) ;
-    color: var(--color-menu-texto);
+    color: var(--color-texto);
 }
 
 .logo {
@@ -42,38 +42,37 @@ header{
 }
 
 .logo__brand-name {
-  font-size: 1.5rem;
-  letter-spacing: 1px;
+    font-size: 1.5rem;
 }
 
 .menu{
     display:grid;
     grid-auto-flow:column;
-    grid-auto-columns:minmax(90px, 1fr); 
+    grid-auto-columns:minmax(40px, 1fr); 
     gap:1rem;
 }
 
 .menu__link {
-  text-decoration: none;
-  color: var(--color-menu-texto);
-  font-weight: 500;
-  font-family: var(--fuente);
-  transition: color 0.3s ease;
+    text-decoration: none;
+    color: var(--color-texto);
+    font-weight: 500;
+    font-family: var(--fuente);
+    transition: color 0.3s ease;
 }
 
 .menu__link:hover {
-  color: var(--menu-texto-hover);
+    color: var(--menu-texto-hover);
 }
 
 .boton{
     background-color: var(--menu-boton);
-    color: var(--color-menu-texto);
+    color: var(--color-texto);
 }
 
 .menu__button {
-  
   border: none;
   padding: 0.6rem 1.2rem;
+  width: 110px;
   border-radius: 8px;
   font-weight: bold;
   cursor: pointer;
@@ -91,7 +90,7 @@ header{
   /* Una sola celda, todos los elementos se apilan en la misma */
   grid-template-areas: "superpuesto";
   width: 100%;
-  height: 90vh;
+  height: 110vh;
   overflow: hidden;
 }
 
@@ -105,12 +104,21 @@ header{
   object-fit: cover;
 }
 
+.portada__descripcion{
+  width: 600px;
+  margin: 0 auto;
+}
+
 .portada__titulo,
-.portada__descripcion,
+.portada__descripcion-parrafo,
 .portada__boton {
-  color: var(--color-principal);
+  color: var(--color-alternativo);
   z-index: 1;
   text-align: center;
+}
+
+.portada__boton{
+  color: var(--color-texto);
 }
 
 .portada__titulo {
@@ -119,9 +127,10 @@ header{
   margin-top: 18vh;
 }
 
-.portada__descripcion {
+.portada__descripcion-parrafo {
   font-size: 1.2rem;
-  margin-top: 37vh;
+  margin-top: 40vh;
+  
 }
 
 .portada__boton {
@@ -135,15 +144,16 @@ header{
   border-radius: 12px;
   cursor: pointer;
   transition: transform .2s ease, box-shadow .2s ease;
+  margin-top: 10vh;
 }
 
 .portada__boton:hover {
   transform: scale(1.08);
 }
 
-section {
+.section {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); /* grid explícita adaptativa */
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); /* grid explícita adaptativa */
   gap: 5rem;
   padding: 2rem;
   grid-auto-flow: dense; /* flujo denso */
@@ -155,7 +165,7 @@ section {
   padding: 1rem;
   text-align: center;
   display: grid;
-  gap: .5rem;
+  gap: 0.5rem;
 }
 
 .services__img {
@@ -172,7 +182,7 @@ section {
 
 .services__description {
   font-size: .9rem;
-  color: var(--color-menu-texto);
+  color: var(--color-texto);
 }
 
 section {
@@ -216,7 +226,7 @@ section {
   grid-area: texto;
   font-size: .95rem;
   line-height: 1.4;
-  color: var(--color-menu-texto);
+  color: var(--color-texto);
 }
 
 aside {
@@ -278,7 +288,7 @@ aside {
     grid-template-columns: 1fr 1fr;  /* SIEMPRE 2 COLUMNAS */
     gap: 2rem;
     background:var(--color-alternativo);
-    color:var(--color-menu-texto);
+    color:var(--color-texto);
     padding:2rem;
 }
 
